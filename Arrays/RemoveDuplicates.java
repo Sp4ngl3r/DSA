@@ -18,7 +18,7 @@ public class RemoveDuplicates {
             for (int i = 0; i < N; i++)
                 a[i] = sc.nextInt();
 
-            Solution g = new Solution();
+            SolutionRemoveDuplicates g = new SolutionRemoveDuplicates();
             int n = g.remove_duplicate(a, N);
 
             for (int i = 0; i < n; i++)
@@ -32,7 +32,7 @@ public class RemoveDuplicates {
 
 // User function Template for Java
 
-class Solution {
+class SolutionRemoveDuplicates {
     int remove_duplicate(int a[], int N) {
         int new_length = 0;
         for (int i = 0; i < N - 1; i++) {

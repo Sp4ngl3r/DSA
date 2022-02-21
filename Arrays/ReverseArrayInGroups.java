@@ -26,7 +26,7 @@ public class ReverseArrayInGroups {
                 arr.add(Integer.parseInt(inputLine2[i]));
             }
 
-            Solution obj = new Solution();
+            SolutionReverseArrayInGroups obj = new SolutionReverseArrayInGroups();
             obj.reverseInGroups(arr, n, k);
 
             StringBuffer str = new StringBuffer();
@@ -42,7 +42,7 @@ public class ReverseArrayInGroups {
 
 // User function Template for Java
 
-class Solution {
+class SolutionReverseArrayInGroups {
     // Function to reverse every sub-array group of size k.
     void reverseInGroups(ArrayList<Integer> arr, int n, int k) {
         for (int i = 0; i < n; i += k) {
