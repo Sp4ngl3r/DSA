@@ -1,12 +1,12 @@
 // Given a sorted array A[] of size N, delete all the duplicates elements from A[].
 // Note: Don't use set or HashMap to solve the problem.
 
-package Arrays;
+package array;
 
 // { Driver Code Starts
 //Initial Template for Java
 
-import java.util.*;
+import java.util.Scanner;
 
 public class RemoveDuplicates {
     public static void main(String[] args) throws Exception {

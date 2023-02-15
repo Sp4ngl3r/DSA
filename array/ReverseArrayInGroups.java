@@ -1,12 +1,14 @@
 // Given an array arr[] of positive integers of size N. Reverse every sub-array group of size K.
 
-package Arrays;
+package array;
 
 // { Driver Code Starts
 //Initial Template for Java
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class ReverseArrayInGroups {
     public static void main(String[] args) throws IOException {

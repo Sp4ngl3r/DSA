@@ -1,12 +1,14 @@
 // Given an unsorted array arr[] of size N,
 // Rotate the array to the left (counter-clockwise direction) by D steps, where D is a positive integer. 
 
-package Arrays;
+package array;
 
 // { Driver Code Starts
 //Initial Template for Java
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class RotateArray {
 
