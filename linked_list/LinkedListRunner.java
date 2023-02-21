@@ -15,7 +15,18 @@ public class LinkedListRunner {
         linkedList.addAtFirst(3);
         linkedList.addAtFirst(4);
 
-        System.out.println(linkedList.getLength());
+        linkedList.printLinkedList();
+
+        linkedList.insertNode(8, 9);
+
+        linkedList.printLinkedList();
+
+        linkedList.removeFromFirst();
+        linkedList.removeFromFirst();
+
+        linkedList.printLinkedList();
+
+        linkedList.reverse();
 
         linkedList.printLinkedList();
     }

@@ -24,47 +24,204 @@ public class LinkedList {
 
     public void addAtFirst(int value) {
 
-        Node tempNode = new Node(value);
+        Node newNode = new Node(value);
 
-        if (length == 0) {
-            head = tempNode;
-            tail = tempNode;
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
         } else {
-            tempNode.next = head;
-            head = tempNode;
+            newNode.next = head;
+            head = newNode;
         }
 
         length++;
-        System.out.println("Node " + tempNode.value + " is being added to Linked List");
+        System.out.println("Node " + newNode.value + " is being added to the beginning of the Linked List");
     }
 
     public void addAtLast(int value) {
 
-        Node tempNode = new Node(value);
+        Node newNode = new Node(value);
 
-        if (length == 0) {
-            head = tempNode;
-            tail = tempNode;
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
         } else {
-            tail.next = tempNode;
-            tail = tempNode;
+            tail.next = newNode;
+            tail = newNode;
         }
 
         length++;
-        System.out.println("Node " + tempNode.value + " is being added to Linked List");
+        System.out.println("Node " + newNode.value + " is being added to the end of the Linked List");
+    }
+
+    public boolean insertNode(int index, int value) {
+
+        if (index < 0 || index > length) {
+            System.out.println("Specified index is not within the range of Linked List");
+            return false;
+        }
+
+        Node newNode = new Node(value);
+        if (index == 0) {
+            if (head == null) {
+                head = newNode;
+                tail = newNode;
+            } else {
+                newNode.next = head;
+                head = newNode;
+            }
+        } else {
+            Node tempNode = head;
+
+            for (int i = 0; i < index - 1; i++)
+                tempNode = tempNode.next;
+
+            newNode.next = tempNode.next;
+            tempNode.next = newNode;
+        }
+        length++;
+        System.out.println("Node " + newNode.value + " is being added to Linked List at the position of " + index);
+        return true;
+    }
+
+    public Node removeFromFirst() {
+        if (head == null) {
+            System.out.println("The Linked List is empty");
+            return null;
+        }
+
+        Node removedNode = head;
+
+        if (length == 1 || head.next == null) {
+            head = null;
+            tail = null;
+        } else {
+            head = head.next;
+        }
+        removedNode.next = null;
+        length--;
+
+        System.out.println("Node " + removedNode.value + " is being removed from the beginning of the Linked List");
+        return removedNode;
+    }
+
+    public Node removeFromLast() {
+        if (head == null) {
+            System.out.println("The Linked List is empty");
+            return null;
+        }
+
+        Node removedNode = head;
+
+        if (length == 1 || head.next == null) {
+            head = null;
+            tail = null;
+        } else {
+            Node tempNode = head;
+            while (tempNode.next.next != null) {
+                tempNode = tempNode.next;
+            }
+            removedNode = tempNode.next;
+            tail = tempNode;
+            tempNode.next = null;
+        }
+        removedNode.next = null;
+        length--;
+
+        System.out.println("Node " + removedNode.value + " is being removed from the end of the Linked List");
+        return removedNode;
+    }
+
+    public Node removeNode(int index) {
+        if (index < 0 || index >= length) {
+            System.out.println("Specified index is not within the range of Linked List");
+            return null;
+        }
+
+        Node removedNode = head;
+
+        if (index == 0) {
+            if (head.next == null || length == 1) {
+                head = null;
+                tail = null;
+            } else {
+                head = head.next;
+            }
+        } else {
+            Node tempNode = head;
+
+            for (int i = 0; i < index - 1; i++)
+                tempNode = tempNode.next;
+
+            removedNode = tempNode.next;
+            tempNode.next = removedNode.next;
+        }
+        removedNode.next = null;
+        length--;
+
+        System.out.println("Node " + removedNode.value + " is being added to Linked List at the position of " + index);
+        return removedNode;
+    }
+
+    // Reversing using 3 pointer method
+    public void reverse() {
+        Node tempNode = head;
+        head = tail;
+        tail = tempNode;
+
+        Node afterNode = tempNode.next;
+        Node beforeNode = null;
+
+        for (int i = 0; i < length; i++) {
+            afterNode = tempNode.next;
+            tempNode.next = beforeNode;
+            beforeNode = tempNode;
+            tempNode = afterNode;
+        }
+
+        System.out.println("The Linked List has been reversed");
     }
 
     public void printLinkedList() {
 
         System.out.print("Linked List contains >>>> ");
 
-        Node temp = head;
-        while (temp != null) {
-            System.out.print(temp.value + " -> ");
-            temp = temp.next;
+        Node tempNode = head;
+        while (tempNode != null) {
+            System.out.print(tempNode.value + " -> ");
+            tempNode = tempNode.next;
         }
 
         System.out.print("null\n");
+    }
+
+    public Node get(int index) {
+        if (index < 0 || index >= length) {
+            System.out.println("Specified index is not within the range of Linked List");
+            return null;
+        }
+
+        Node tempNode = head;
+        for (int i = 0; i < index; i++)
+            tempNode = tempNode.next;
+
+        return tempNode;
+    }
+
+    public boolean setNode(int index, int value) {
+        if (index < 0 || index >= length) {
+            System.out.println("Specified index is not within the range of Linked List");
+            return false;
+        }
+        Node tempNode = head;
+        for (int i = 0; i < index; i++)
+            tempNode = tempNode.next;
+
+        if (tempNode != null) {
+            tempNode.value = value;
+            return true;
+        }
+        return false;
     }
 
     public int getLength() {
