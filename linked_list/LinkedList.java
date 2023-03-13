@@ -34,7 +34,7 @@ public class LinkedList {
             head = newNode;
         }
 
-        length++;
+        this.length++;
         System.out.println("Node " + newNode.value + " is being added to the beginning of the Linked List");
     }
 
@@ -50,7 +50,7 @@ public class LinkedList {
             tail = newNode;
         }
 
-        length++;
+        this.length++;
         System.out.println("Node " + newNode.value + " is being added to the end of the Linked List");
     }
 
@@ -79,7 +79,7 @@ public class LinkedList {
             newNode.next = tempNode.next;
             tempNode.next = newNode;
         }
-        length++;
+        this.length++;
         System.out.println("Node " + newNode.value + " is being added to Linked List at the position of " + index);
         return true;
     }
@@ -99,7 +99,7 @@ public class LinkedList {
             head = head.next;
         }
         removedNode.next = null;
-        length--;
+        this.length--;
 
         System.out.println("Node " + removedNode.value + " is being removed from the beginning of the Linked List");
         return removedNode;
@@ -126,7 +126,7 @@ public class LinkedList {
             tempNode.next = null;
         }
         removedNode.next = null;
-        length--;
+        this.length--;
 
         System.out.println("Node " + removedNode.value + " is being removed from the end of the Linked List");
         return removedNode;
@@ -157,9 +157,9 @@ public class LinkedList {
             tempNode.next = removedNode.next;
         }
         removedNode.next = null;
-        length--;
+        this.length--;
 
-        System.out.println("Node " + removedNode.value + " is being added to Linked List at the position of " + index);
+        System.out.println("Node " + removedNode.value + " is being removed from Linked List at the position of " + index);
         return removedNode;
     }
 
@@ -195,7 +195,7 @@ public class LinkedList {
         System.out.print("null\n");
     }
 
-    public Node get(int index) {
+    public Node getNode(int index) {
         if (index < 0 || index >= length) {
             System.out.println("Specified index is not within the range of Linked List");
             return null;
@@ -213,15 +213,13 @@ public class LinkedList {
             System.out.println("Specified index is not within the range of Linked List");
             return false;
         }
+
         Node tempNode = head;
         for (int i = 0; i < index; i++)
             tempNode = tempNode.next;
 
-        if (tempNode != null) {
-            tempNode.value = value;
-            return true;
-        }
-        return false;
+        tempNode.value = value;
+        return true;
     }
 
     public int getLength() {
