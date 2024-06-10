@@ -1,14 +1,14 @@
 package blind_75;
 
-// https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
+///https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
 public class SlidingWindow {
 
     public int maxProfit(int[] prices) {
 
-        // Left Pointer tries to hold the lowest price of the stock.
+        ///Left Pointer tries to hold the lowest price of the stock.
         int left = 0;
 
-        // Right Pointer tries to hold the highest price of the stock.
+        ///Right Pointer tries to hold the highest price of the stock.
         int right = 1;
 
         int maximumProfit = 0;

@@ -1,6 +1,6 @@
 package blind_75;
 
-// https://leetcode.com/problems/product-of-array-except-self/description/
+///https://leetcode.com/problems/product-of-array-except-self/description/
 public class ProductOfArrayExceptItself {
 
     public int[] productExceptSelf(int[] nums) {
@@ -9,6 +9,8 @@ public class ProductOfArrayExceptItself {
 
         int prefixProduct = 1;
 
+        ///Result array will store the product of all the elements
+        // from the left most part of the array, except that element.
         for (int i = 0; i < nums.length; i++) {
             result[i] = prefixProduct;
             prefixProduct *= nums[i];
@@ -16,6 +18,8 @@ public class ProductOfArrayExceptItself {
 
         int postFixProduct = 1;
 
+        ///Now the Result array will be updated, by multiplying with the
+        // products from right side of the array.
         for (int i = nums.length - 1; i >= 0; i--) {
             result[i] *= postFixProduct;
             postFixProduct *= nums[i];

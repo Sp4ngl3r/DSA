@@ -1,11 +1,11 @@
 package blind_75;
 
-// https://leetcode.com/problems/maximum-subarray/description/
+///https://leetcode.com/problems/maximum-subarray/description/
 public class MaximumSubarray {
 
     public static int maxSubArray(int[] nums) {
 
-        // This uses Kadane's algorithm - Sliding Window Technique
+        ///This uses Kadane's algorithm - Sliding Window Technique
         int currentMaximum = nums[0];
         int overallMaximum = nums[0];
 
