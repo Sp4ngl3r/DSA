@@ -1,4 +1,4 @@
-package blind_75;
+package blind_75.arrays;
 
 ///https://leetcode.com/problems/product-of-array-except-self/description/
 public class ProductOfArrayExceptItself {
