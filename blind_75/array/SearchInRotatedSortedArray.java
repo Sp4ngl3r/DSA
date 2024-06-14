@@ -1,4 +1,4 @@
-package blind_75.arrays;
+package blind_75.array;
 
 ///https://leetcode.com/problems/search-in-rotated-sorted-array/description/
 public class SearchInRotatedSortedArray {

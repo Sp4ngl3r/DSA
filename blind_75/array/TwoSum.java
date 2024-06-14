@@ -1,4 +1,4 @@
-package blind_75.arrays;
+package blind_75.array;
 
 import java.util.HashMap;
 import java.util.Map;
