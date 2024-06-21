@@ -25,5 +25,18 @@ public class MissingNumber {
         return sum - actualSum;
     }
 
-    
+    public int missingNumberUsingXOROperator(int[] nums) {
+        int n = nums.length;
+        int ans = 0;
+
+        for (int i = 1; i <= n; i++) {
+            ans = ans ^ i;
+        }
+
+        for (int num : nums) {
+            ans = ans ^ num;
+        }
+
+        return ans;
+    }
 }
