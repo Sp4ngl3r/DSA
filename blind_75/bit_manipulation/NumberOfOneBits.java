@@ -1,4 +1,4 @@
-package bit_manipulation;
+package blind_75.bit_manipulation;
 
 ///https://leetcode.com/problems/number-of-1-bits/description/
 public class NumberOfOneBits {
@@ -17,7 +17,7 @@ public class NumberOfOneBits {
         int count = 0;
         while (n != 0) {
             ///This tries to remove the last set 1-bit in the binary number.
-            n = n & (n - 1);
+            n &= (n - 1);
             count++;
         }
 
