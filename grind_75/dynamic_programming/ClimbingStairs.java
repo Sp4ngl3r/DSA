@@ -1,4 +1,4 @@
-package blind_75.dynamic_programming;
+package grind_75.dynamic_programming;
 
 ///[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/)
 public class ClimbingStairs {

@@ -1,4 +1,4 @@
-package blind_75.array;
+package grind_75.arrays;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +8,7 @@ public class TwoSum {
 
     public int[] twoSum(int[] nums, int target) {
 
-        Map<Integer, Integer> differenceMap = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> differenceMap = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
             if (differenceMap.containsKey(i)) {

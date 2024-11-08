@@ -1,4 +1,4 @@
-package blind_75.bit_manipulation;
+package grind_75.bit_manipulation;
 
 ///[Number of one bits](https://leetcode.com/problems/number-of-1-bits/description/)
 public class NumberOfOneBits {

@@ -1,4 +1,4 @@
-package blind_75.array;
+package grind_75.arrays;
 
 ///[Best time to buy and sell stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
 public class SlidingWindow {

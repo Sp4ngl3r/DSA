@@ -1,4 +1,4 @@
-package blind_75.bit_manipulation;
+package grind_75.bit_manipulation;
 
 ///[Reverse Bits](https://leetcode.com/problems/reverse-bits/description/)
 public class ReverseBits {

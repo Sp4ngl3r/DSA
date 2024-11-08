@@ -1,4 +1,4 @@
-package blind_75.array;
+package grind_75.arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;

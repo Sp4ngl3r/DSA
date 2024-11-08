@@ -1,4 +1,4 @@
-package blind_75.bit_manipulation;
+package grind_75.bit_manipulation;
 
 ///[Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/description/)
 public class SumOfTwoIntegers {

@@ -1,4 +1,4 @@
-package blind_75.array;
+package grind_75.arrays;
 
 ///[Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/description)
 public class MaximumProductSubarray {

@@ -1,4 +1,4 @@
-package blind_75.bit_manipulation;
+package grind_75.bit_manipulation;
 
 import java.util.Arrays;
 
