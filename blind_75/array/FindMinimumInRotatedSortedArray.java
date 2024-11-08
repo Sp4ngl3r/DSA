@@ -1,6 +1,6 @@
 package blind_75.array;
 
-///https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+///[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 public class FindMinimumInRotatedSortedArray {
 
     public int findMin(int[] nums) {

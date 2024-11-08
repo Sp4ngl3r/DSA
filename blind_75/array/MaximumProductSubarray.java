@@ -1,6 +1,6 @@
 package blind_75.array;
 
-///https://leetcode.com/problems/maximum-product-subarray/description/
+///[Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/description)
 public class MaximumProductSubarray {
 
     public int maxProduct(int[] nums) {

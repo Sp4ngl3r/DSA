@@ -1,6 +1,6 @@
 package strings;
 
-///https://leetcode.com/problems/reverse-string/description
+///[Reverse String](https://leetcode.com/problems/reverse-string/description)
 public class ReverseString {
 
     public void reverseString(char[] s) {

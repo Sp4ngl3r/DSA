@@ -2,7 +2,7 @@ package blind_75.bit_manipulation;
 
 import java.util.Arrays;
 
-///https://leetcode.com/problems/missing-number/description/
+///[Missing Number](https://leetcode.com/problems/missing-number/description/)
 public class MissingNumber {
 
 

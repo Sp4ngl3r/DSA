@@ -1,6 +1,6 @@
 package blind_75.array;
 
-///https://leetcode.com/problems/maximum-subarray/description/
+///[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/)
 public class MaximumSubarray {
 
     public static int maxSubArray(int[] nums) {

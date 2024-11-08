@@ -1,6 +1,6 @@
 package blind_75.dynamic_programming;
 
-///https://leetcode.com/problems/climbing-stairs/description/
+///[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/)
 public class ClimbingStairs {
 
     public int climbStairs(int n) {

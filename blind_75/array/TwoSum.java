@@ -3,7 +3,7 @@ package blind_75.array;
 import java.util.HashMap;
 import java.util.Map;
 
-///https://leetcode.com/problems/two-sum/description/
+///[Two Sum](https://leetcode.com/problems/two-sum/description/)
 public class TwoSum {
 
     public int[] twoSum(int[] nums, int target) {

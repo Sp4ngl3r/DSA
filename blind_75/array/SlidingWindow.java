@@ -1,6 +1,6 @@
 package blind_75.array;
 
-///https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
+///[Best time to buy and sell stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
 public class SlidingWindow {
 
     public int maxProfit(int[] prices) {

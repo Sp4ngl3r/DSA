@@ -1,6 +1,6 @@
 package blind_75.bit_manipulation;
 
-///https://leetcode.com/problems/number-of-1-bits/description/
+///[Number of one bits](https://leetcode.com/problems/number-of-1-bits/description/)
 public class NumberOfOneBits {
 
     public int hammingWeight(int n) {

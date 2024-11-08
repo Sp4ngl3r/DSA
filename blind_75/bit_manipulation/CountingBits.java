@@ -1,6 +1,6 @@
 package blind_75.bit_manipulation;
 
-///https://leetcode.com/problems/counting-bits/description/
+///[Counting Bits](https://leetcode.com/problems/counting-bits/description/)
 public class CountingBits {
 
     ///This is also a Dynamic Programming Problem

@@ -1,6 +1,6 @@
 package array;
 
-/// https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/
+///[Two Sums 2](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)
 public class TwoSum2 {
 
     public int[] twoSum(int[] numbers, int target) {

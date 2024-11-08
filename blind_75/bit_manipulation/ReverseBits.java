@@ -1,6 +1,6 @@
 package blind_75.bit_manipulation;
 
-///https://leetcode.com/problems/reverse-bits/description/
+///[Reverse Bits](https://leetcode.com/problems/reverse-bits/description/)
 public class ReverseBits {
 
     // you need treat n as an unsigned value

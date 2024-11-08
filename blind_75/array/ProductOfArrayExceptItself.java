@@ -1,6 +1,6 @@
 package blind_75.array;
 
-///https://leetcode.com/problems/product-of-array-except-self/description/
+///[Product of Array Except Itself](https://leetcode.com/problems/product-of-array-except-self/description/)
 public class ProductOfArrayExceptItself {
 
     public int[] productExceptSelf(int[] nums) {

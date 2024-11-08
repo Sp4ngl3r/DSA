@@ -1,6 +1,6 @@
 package array;
 
-///https://leetcode.com/problems/remove-element/description/
+///[Remove Element](https://leetcode.com/problems/remove-element/description/)
 public class RemoveElement {
 
     public int removeElement(int[] nums, int val) {

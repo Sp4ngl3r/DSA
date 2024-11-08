@@ -2,7 +2,7 @@ package blind_75.dynamic_programming;
 
 import java.util.Arrays;
 
-///https://leetcode.com/problems/coin-change/description/
+///[Coin Change](https://leetcode.com/problems/coin-change/description/)
 public class CoinChange {
 
     public int coinChange(int[] coins, int amount) {
