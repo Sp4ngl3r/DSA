@@ -11,18 +11,20 @@ public class FindMinimumInRotatedSortedArray {
 
         while (left <= right) {
 
-            ///Check whether the elements inside left pointer and right pointer is in ascending order
-            ///Then return the lowest element.
+            /// Check whether the elements inside left pointer and right pointer is in
+            /// ascending order
+            /// Then return the lowest element.
             if (nums[left] < nums[right]) {
                 return Math.min(result, nums[left]);
             }
 
-            ///Evaluate the middle element and update the minimum element.
+            /// Evaluate the middle element and update the minimum element.
             int mid = left + (right - left) / 2;
             result = Math.min(result, nums[mid]);
 
-            ///If the middle element value is greater than or equal to the left pointer element,
-            ///then change the pointers likewise.
+            /// If the middle element value is greater than or equal to the left pointer
+            /// element,
+            /// then change the pointers likewise.
             if (nums[mid] >= nums[left]) {
                 left = mid + 1;
             } else {

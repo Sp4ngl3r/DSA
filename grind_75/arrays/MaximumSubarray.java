@@ -5,7 +5,7 @@ public class MaximumSubarray {
 
     public static int maxSubArray(int[] nums) {
 
-        ///This uses Kadane's algorithm - Sliding Window Technique
+        /// This uses Kadane's algorithm - Sliding Window Technique
         int currentMaximum = nums[0];
         int overallMaximum = nums[0];
 

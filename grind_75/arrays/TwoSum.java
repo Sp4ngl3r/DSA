@@ -12,12 +12,12 @@ public class TwoSum {
 
         for (int i = 0; i < nums.length; i++) {
             if (differenceMap.containsKey(i)) {
-                return new int[]{differenceMap.get(i), i};
+                return new int[] { differenceMap.get(i), i };
             }
             differenceMap.put(target - nums[i], i);
         }
 
-        return new int[]{-1, -1};
+        return new int[] { -1, -1 };
     }
 
 }

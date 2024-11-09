@@ -9,7 +9,7 @@ public class ProductOfArrayExceptItself {
 
         int prefixProduct = 1;
 
-        ///Result array will store the product of all the elements
+        /// Result array will store the product of all the elements
         // from the left most part of the array, except that element.
         for (int i = 0; i < nums.length; i++) {
             result[i] = prefixProduct;
@@ -18,7 +18,7 @@ public class ProductOfArrayExceptItself {
 
         int postFixProduct = 1;
 
-        ///Now the Result array will be updated, by multiplying with the
+        /// Now the Result array will be updated, by multiplying with the
         // products from right side of the array.
         for (int i = nums.length - 1; i >= 0; i--) {
             result[i] *= postFixProduct;

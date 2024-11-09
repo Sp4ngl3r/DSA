@@ -14,15 +14,15 @@ class Solution {
 
         HashMap<Integer, Integer> differenceMap = new HashMap<>();
 
-        for (int i=0;i<nums.length;i++){
-            if(differenceMap.containsKey(nums[i])){
-                return new int[]{differenceMap.get(nums[i]),i};
+        for (int i = 0; i < nums.length; i++) {
+            if (differenceMap.containsKey(nums[i])) {
+                return new int[] { differenceMap.get(nums[i]), i };
             }
 
-            differenceMap.put(target-nums[i],i);
+            differenceMap.put(target - nums[i], i);
         }
 
-        return new int[]{-1,-1};
+        return new int[] { -1, -1 };
     }
 }
 // @lc code=end

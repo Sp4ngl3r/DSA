@@ -16,9 +16,9 @@ public class SearchInRotatedSortedArray {
                 return mid;
             }
 
-            ///Searching in Left Sorted Portion
+            /// Searching in Left Sorted Portion
             if (nums[left] <= nums[mid]) {
-                ///If the leftmost element is greater or mid-element is lesser than
+                /// If the leftmost element is greater or mid-element is lesser than
                 // target, then shift left to mid+1, else shift right to mid-1.
                 if (nums[left] > target || nums[mid] < target) {
                     left = mid + 1;
@@ -26,9 +26,9 @@ public class SearchInRotatedSortedArray {
                     right = mid - 1;
                 }
             }
-            ///Searching in Right Sorted Portion
+            /// Searching in Right Sorted Portion
             else {
-                ///Do the opposite of the above case
+                /// Do the opposite of the above case
                 if (nums[right] < target || nums[mid] > target) {
                     right = mid - 1;
                 } else {
