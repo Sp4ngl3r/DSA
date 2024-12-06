@@ -1,4 +1,4 @@
-package leetcode.linked_lists;
+package linked_lists;
 
 /*
  * @lc app=leetcode id=21 lang=java

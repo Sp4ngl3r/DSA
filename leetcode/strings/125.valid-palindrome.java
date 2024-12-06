@@ -1,4 +1,4 @@
-package leetcode.strings;
+package strings;
 
 /*
  * @lc app=leetcode id=125 lang=java

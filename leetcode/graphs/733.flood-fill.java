@@ -1,4 +1,4 @@
-package leetcode.graphs;
+package graphs;
 
 /*
  * @lc app=leetcode id=733 lang=java
@@ -39,7 +39,7 @@ class Solution {
     }
 
     public int[][] floodFill(int[][] image, int sr, int sc, int color) {
-                    
+
         if (image[sr][sc] == color) {
             return image;
         }

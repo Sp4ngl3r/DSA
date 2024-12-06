@@ -1,4 +1,4 @@
-package leetcode.trees;
+package trees;
 
 /*
  * @lc app=leetcode id=226 lang=java
