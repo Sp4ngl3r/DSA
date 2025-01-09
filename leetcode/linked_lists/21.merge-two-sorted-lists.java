@@ -20,8 +20,9 @@ package linked_lists;
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 
-        ListNode sortedList = new ListNode();
-        ListNode currentNode = sortedList;
+        /// Dummy Node Approach
+        ListNode sortedList = new ListNode(); // dummy node
+        ListNode currentNode = sortedList; // pointer to the dummy node
 
         while (list1 != null && list2 != null) {
 
@@ -41,6 +42,7 @@ class Solution {
         /// rest of the nodes from the bigger list.
         currentNode.next = (list1 != null) ? list1 : list2;
 
+        /// Return the next node of the dummy node which is the head of the sorted list.
         return sortedList.next;
     }
 }

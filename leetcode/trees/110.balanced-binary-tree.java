@@ -28,23 +28,30 @@ class Solution {
         return true;
     }
 
+    // Using DFS method to calculate the height of the tree
     private int height(TreeNode root) {
+        // Base case
         if (root == null) {
             return 0;
         }
 
+        // Calculate the height of left and right subtree
         int leftHeight = height(root.left);
         int rightHeight = height(root.right);
 
+        // If any of the subtree is unbalanced, return -1
         if (leftHeight == -1 || rightHeight == -1) {
             return -1;
         }
 
+        // If the difference between the height of
+        // left and right subtree is greater than 1, return -1
         if (Math.abs(leftHeight - rightHeight) > 1) {
             return -1;
         }
 
-        return Math.max(leftHeight, rightHeight) + 1;
+        // Return the height of the tree
+        return 1 + Math.max(leftHeight, rightHeight);
     }
 }
 // @lc code=end

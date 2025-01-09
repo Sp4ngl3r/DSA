@@ -27,10 +27,9 @@ class Solution {
             int r = row + cell[0];
             int c = column + cell[1];
 
-            // check if the cell is within the matrix
-            if (r >= 0 && r < m &&
-                    c >= 0 && c < n &&
-                    image[r][c] == currentColor) {
+            // check if the cell is within the matrix,
+            // and has the same color as the starting cell
+            if (r >= 0 && r < m && c >= 0 && c < n && image[r][c] == currentColor) {
                 image[r][c] = newColor;
                 dfs(image, r, c, currentColor, newColor);
             }
@@ -40,11 +39,14 @@ class Solution {
 
     public int[][] floodFill(int[][] image, int sr, int sc, int color) {
 
+        // if the starting cell has the same color as the new color
+        // return the image as it is
         if (image[sr][sc] == color) {
             return image;
         }
 
-        // set the starting cell to have new color
+        // get the value of the starting cell,
+        // and set the starting cell to have new color
         int currentColor = image[sr][sc];
         image[sr][sc] = color;
 

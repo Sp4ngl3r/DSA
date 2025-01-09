@@ -25,14 +25,18 @@ package trees;
 class Solution {
     public TreeNode invertTree(TreeNode root) {
 
+        /// Base case
         if (root == null) {
             return null;
         }
 
+        /// Using DFS method to invert the binary tree,
+        /// Swap the left and right child of the root
         TreeNode temp = root.left;
         root.left = root.right;
         root.right = temp;
 
+        /// Recursively invert the left and right child
         invertTree(root.left);
         invertTree(root.right);
 
