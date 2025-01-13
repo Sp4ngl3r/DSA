@@ -28,6 +28,8 @@ class Solution {
         }
 
         for (char c : ransomNote.toCharArray()) {
+            // if the character is not present in the dictionary or the count of the character
+            // is 0, then return false
             if (dictionaryMap.containsKey(c) && dictionaryMap.get(c) > 0) {
                 dictionaryMap.put(c, dictionaryMap.get(c) - 1);
             } else {
