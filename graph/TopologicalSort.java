@@ -6,6 +6,7 @@ import java.util.Stack;
 class TopologicalSort {
 
     private static void dfs(int node, int[] visited, Stack<Integer> stack, ArrayList<ArrayList<Integer>> adjacent) {
+
         visited[node] = 1;
         ArrayList<Integer> connectedNodes = adjacent.get(node);
 
