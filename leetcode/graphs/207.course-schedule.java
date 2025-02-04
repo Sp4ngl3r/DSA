@@ -15,6 +15,7 @@ import java.util.Queue;
 class Solution {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
 
+        // Using BFS method
         List<Integer>[] adj = new List[numCourses];
         int[] indegree = new int[numCourses];
         List<Integer> ans = new ArrayList<>();
