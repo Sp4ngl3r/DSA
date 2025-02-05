@@ -33,6 +33,8 @@ class Solution {
                 break;
             }
 
+            /// Before checking the limits of the answer, make sure it is
+            /// within limits.
             if (Integer.MAX_VALUE / 10 < answer
                     || Integer.MAX_VALUE / 10 == answer && Integer.MAX_VALUE % 10 < digit) {
                 return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
