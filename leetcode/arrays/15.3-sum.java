@@ -18,6 +18,8 @@ class Solution {
         Arrays.sort(nums);
 
         for (int i = 0; i < nums.length - 2; i++) {
+            // Following condition is to skip the previous element
+            // if i = 0
             if (i == 0 || nums[i] != nums[i - 1]) {
                 int low = i + 1, high = nums.length - 1;
 

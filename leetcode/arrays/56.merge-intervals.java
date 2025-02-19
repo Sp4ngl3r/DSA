@@ -16,11 +16,7 @@ class Solution {
         int n = intervals.length;
 
         /// Sort in increasing order
-        Arrays.sort(intervals, new Comparator<int[]>() {
-            public int compare(int[] a, int[] b) {
-                return a[0] - b[0];
-            }
-        });
+        Arrays.sort(intervals, (int[] a, int[] b) -> Integer.compare(a[0], b[0]));
 
         int[][] merged = new int[n][2];
 
@@ -43,7 +39,7 @@ class Solution {
             }
         }
 
-        return Arrays.copyOf(merged, mergedIndex+1);
+        return Arrays.copyOf(merged, mergedIndex + 1);
     }
 }
 // @lc code=end

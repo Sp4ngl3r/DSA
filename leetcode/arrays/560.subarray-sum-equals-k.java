@@ -20,10 +20,10 @@ class Solution {
         for (int i : nums) {
 
             currentSum += i;
-            int differenceElemet = currentSum - k;
+            int differenceElement = currentSum - k;
 
-            if (prefixSum.containsKey(differenceElemet)) {
-                result += prefixSum.get(differenceElemet);
+            if (prefixSum.containsKey(differenceElement)) {
+                result += prefixSum.get(differenceElement);
             }
 
             prefixSum.put(currentSum, prefixSum.getOrDefault(currentSum, 0) + 1);

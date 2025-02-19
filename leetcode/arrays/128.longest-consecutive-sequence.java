@@ -22,7 +22,8 @@ class Solution {
 
         for (int num : set) {
 
-            /// Check for previous number in the set
+            /// Check whether it is the starting number
+            /// of the series
             if (!set.contains(num - 1)) {
 
                 /// Check for next number in the series,
