@@ -14,6 +14,8 @@ class Solution {
 
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
+                /// If either of the path is out of bounds,
+                /// store a single path.
                 if (i == 0 || j == 0) {
                     pathGrid[i][j] = 1;
                 } else {
