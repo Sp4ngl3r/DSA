@@ -23,43 +23,31 @@ package trees;
  * }
  */
 class Solution {
+
+    private int point = 0;
+
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        return treeConstructor(preorder, inorder, 0, 0, inorder.length - 1);
+        return treeConstructor(preorder, inorder, 0, preorder.length - 1);
     }
 
-    private TreeNode treeConstructor(
-            int[] preorder,
-            int[] inorder,
-            int preorderStart,
-            int inorderStart,
-            int inorderEnd) {
+    public TreeNode treeConstructor(int[] preorder, int[] inorder, int start, int end) {
 
-        if (preorderStart > preorder.length - 1 || inorderStart > inorderEnd) {
+        if (start > end) {
             return null;
         }
 
-        TreeNode root = new TreeNode(preorder[preorderStart]);
-        int currentInorderIndex = 0;
+        int val = preorder[point++];
+        TreeNode root = new TreeNode(val);
+        int inorderNode = 0;
 
-        for (int i = inorderStart; i <= inorderEnd; i++) {
-            if (inorder[i] == currentInorderIndex) {
-                currentInorderIndex = i;
+        for (int i = 0; i < inorder.length; i++) {
+            if (val == inorder[i]) {
+                inorderNode = i;
             }
         }
 
-        root.left = treeConstructor(
-                preorder,
-                inorder,
-                preorderStart + 1,
-                inorderStart,
-                inorderEnd - 1);
-
-        root.right = treeConstructor(
-                preorder,
-                inorder,
-                preorderStart + currentInorderIndex - inorderStart + 1,
-                inorderStart,
-                inorderEnd);
+        root.left = treeConstructor(preorder, inorder, start, inorderNode - 1);
+        root.right = treeConstructor(preorder, inorder, inorderNode + 1, end);
 
         return root;
     }
