@@ -17,9 +17,8 @@ class Solution {
         String last = strs[strs.length - 1];
 
         StringBuilder prefix = new StringBuilder();
-        int shortestStringLength = Math.min(first.length(), last.length());
 
-        for (int i = 0; i < shortestStringLength; i++) {
+        for (int i = 0; i < first.length(); i++) {
             if (first.charAt(i) != last.charAt(i)) {
                 return prefix.toString();
             }

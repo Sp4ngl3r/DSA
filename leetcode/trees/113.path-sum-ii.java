@@ -32,7 +32,7 @@ class Solution {
         return result;
     }
 
-    void findPathSum(TreeNode root, int targetSum, List<List<Integer>> result, List<Integer> currentPath) {
+    private void findPathSum(TreeNode root, int targetSum, List<List<Integer>> result, List<Integer> currentPath) {
 
         if (root == null) {
             return;

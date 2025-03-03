@@ -12,12 +12,13 @@ import java.util.List;
 // @lc code=start
 class Solution {
 
-    private void findCombinations(int index, int[] arr, int target, List<Integer> combination, List<List<Integer>> result){
+    private void findCombinations(int index, int[] arr, int target, List<Integer> combination,
+            List<List<Integer>> result) {
 
         /// If we reached the end, check whether we got the target and
         /// add it to the result, else return.
-        if(index==arr.length){
-            if(target==0){
+        if (index == arr.length) {
+            if (target == 0) {
                 result.add(new ArrayList<>(combination));
             }
 
@@ -29,19 +30,19 @@ class Solution {
         /// 2. we can discard the current element
 
         /// First option
-        if(arr[index]<=target){
+        if (arr[index] <= target) {
             /// we include the element
             /// reduce the target
             combination.add(arr[index]);
-            findCombinations(index, arr, target-arr[index], combination, result);
+            findCombinations(index, arr, target - arr[index], combination, result);
 
             /// This is done to remove the latest element if it does not
             /// help in getting the target.
-            combination.remove(combination.size()-1);
+            combination.remove(combination.size() - 1);
         }
 
         /// Second option: to discard the current element
-        findCombinations(index+1, arr, target, combination, result);
+        findCombinations(index + 1, arr, target, combination, result);
     }
 
     public List<List<Integer>> combinationSum(int[] candidates, int target) {

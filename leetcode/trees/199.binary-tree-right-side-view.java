@@ -43,13 +43,12 @@ class Solution {
             for (int i = 0; i < size; i++) {
                 TreeNode currentNode = queue.poll();
 
-                /// This adds the right most element after all
-                /// nodes are removed.
+                /// The first node is always the rightmost node.
                 if (i == 0) {
                     result.add(currentNode.val);
                 }
 
-                /// Add right node first and then add left node
+                /// Add right node first and then add left node.
                 if (currentNode.right != null) {
                     queue.add(currentNode.right);
                 }

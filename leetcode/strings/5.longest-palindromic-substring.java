@@ -10,7 +10,7 @@ package strings;
 class Solution {
 
     public String longestPalindrome(String s) {
-        /// Dynamic Approach
+        /// Dynamic Progamming Approach
         if (s.length() == 0) {
             return "";
         }

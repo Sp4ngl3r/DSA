@@ -20,11 +20,7 @@ class Solution {
         Map<Character, Integer> dictionaryMap = new HashMap<>();
 
         for (char c : magazine.toCharArray()) {
-            if (dictionaryMap.containsKey(c)) {
-                dictionaryMap.put(c, dictionaryMap.get(c) + 1);
-            } else {
-                dictionaryMap.put(c, 1);
-            }
+            dictionaryMap.put(c, dictionaryMap.getOrDefault(c, 0) + 1);
         }
 
         for (char c : ransomNote.toCharArray()) {

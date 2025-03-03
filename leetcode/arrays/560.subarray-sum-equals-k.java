@@ -20,6 +20,9 @@ class Solution {
         for (int i : nums) {
 
             currentSum += i;
+
+            /// Calculate the element/s, adding which to our
+            /// current element can sum upto k.
             int differenceElement = currentSum - k;
 
             if (prefixSum.containsKey(differenceElement)) {

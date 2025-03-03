@@ -1,7 +1,6 @@
 package arrays;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 /*
  * @lc app=leetcode id=56 lang=java
