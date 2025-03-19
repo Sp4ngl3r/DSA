@@ -22,6 +22,8 @@ class Solution {
             int evenPalindromeLength = expandingFromMiddle(s, i, i + 1);
             int maxLength = Math.max(oddPalindromeLength, evenPalindromeLength);
 
+            /// After receiving the length of the maximum palindromic string,
+            /// calculate the indices of that palindromic string.
             if (maxLength > end - start) {
                 start = i - ((maxLength - 1) / 2);
                 end = i + ((maxLength) / 2);
