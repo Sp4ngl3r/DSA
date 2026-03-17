@@ -20,7 +20,6 @@ class Solution {
         // }
         // return Math.min(minCost[n-1], minCost[n-2]);
 
-
         // Space Complexity: O(1)
         int n = cost.length;
         int prev1 = cost[0];
