@@ -1,7 +1,5 @@
 package dynamic_programming;
 
-import java.util.Arrays;
-
 /*
  * @lc app=leetcode id=63 lang=java
  *
@@ -20,8 +18,6 @@ class Solution {
         int n = obstacleGrid[0].length;
 
         int dp[] = new int[n];
-        Arrays.fill(dp, 0);
-
         dp[0] = 1;
 
         for (int i = 0; i < m; i++) {

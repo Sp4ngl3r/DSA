@@ -13,14 +13,6 @@ class Solution {
         int n = text2.length();
         int[][] dp = new int[m + 1][n + 1];
 
-        // Populate first row and first column with zeroes
-        for (int i = 0; i <= m; i++) {
-            dp[i][0] = 0;
-        }
-        for (int i = 0; i <= n; i++) {
-            dp[0][i] = 0;
-        }
-
         for (int i = 1; i <= m; i++) {
             for (int j = 1; j <= n; j++) {
                 // If the characters match, increment the diagonal value by 1;
