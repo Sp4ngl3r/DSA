@@ -35,7 +35,7 @@ class Solution {
         }
 
         // Fill in the DP table using bottom-up dynamic programming
-        for (int ind = 1; ind < arr.length; ind++) {
+        for (int index = 1; index < arr.length; index++) {
             boolean cur[] = new boolean[k + 1];
             cur[0] = true;
             for (int target = 1; target <= k; target++) {
@@ -44,8 +44,8 @@ class Solution {
 
                 // Calculate if the current element is taken
                 boolean taken = false;
-                if (arr[ind] <= target) {
-                    taken = prev[target - arr[ind]];
+                if (arr[index] <= target) {
+                    taken = prev[target - arr[index]];
                 }
 
                 // Update the DP table for the current element and target sum
