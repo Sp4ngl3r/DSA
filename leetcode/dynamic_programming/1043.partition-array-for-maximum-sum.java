@@ -1,3 +1,5 @@
+package dynamic_programming;
+
 /*
  * @lc app=leetcode id=1043 lang=java
  *
@@ -5,8 +7,6 @@
  */
 
 // @lc code=start
-
-import java.util.Arrays;
 
 class Solution {
     // public int maxSumAfterPartitioning(int[] arr, int k) {
